@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TodoItems from "./TodoItems";
 import "./TodoList.css";
+import * as moment from 'moment';
 
 class TodoList extends Component {
   constructor(props) {
@@ -45,7 +46,7 @@ class TodoList extends Component {
     return (
       <div className="todoListMain">
         <div className="header">
-        <h1>Grant's ToDo List</h1>
+        <h1>{moment().format("MMM Do YY")} ToDo</h1>
           <form onSubmit={this.addItem}>
             <input
               ref={a => (this._inputElement = a)}
