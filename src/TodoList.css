@@ -2,8 +2,17 @@
   padding: 10px;
   font-size: 16px;
   border: 2px solid #fff;
-  width: 165px;
+  width: 585px;
 }
+
+.container {
+  background-color: rgb(196, 117, 43);
+  padding: 10px;
+  height: auto;
+  width: 850px;
+  border-radius: 5px;
+}
+
 .todoListMain .header button {
   padding: 10px;
   font-size: 16px;
@@ -21,11 +30,11 @@
 .todoListMain .theList {
   list-style: none;
   padding-left: 0;
-  width: 250px;
+  width: 600px;
 }
 .todoListMain .theList li {
   color: #333;
-  background-color: rgba(255,255,255,.5);
+  background-color: rgba(245, 240, 240, 0.5);
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 5px;
@@ -33,7 +42,8 @@
 }
 
 .todoListMain .theList li:hover {
-  background-color: pink;
+  background-color: rgb(88, 81, 199);
+  color: white;
   cursor: pointer;
 }
 ul.theList {

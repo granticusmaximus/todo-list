@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import TodoItems from "./TodoItems";
 import "./TodoList.css";
-import * as moment from 'moment';
+import * as moment from "moment";
 
 class TodoList extends Component {
   constructor(props) {
@@ -44,18 +44,21 @@ class TodoList extends Component {
   }
   render() {
     return (
-      <div className="todoListMain">
-        <div className="header">
-        <h1>{moment().format("MMM Do YY")} ToDo</h1>
-          <form onSubmit={this.addItem}>
-            <input
-              ref={a => (this._inputElement = a)}
-              placeholder="Please Enter A Task"
-            />
-            <button type="submit">add</button>
-          </form>
+      <div className="container">
+        <div className="todoListMain">
+          <div className="header">
+            <h1>{moment().format("MMM Do YY")}</h1>
+            <h2>Grant's ToDo List</h2>
+            <form onSubmit={this.addItem}>
+              <input
+                ref={a => (this._inputElement = a)}
+                placeholder="Please Enter A Task"
+              />
+              <button type="submit">Add Item</button>
+            </form>
+          </div>
+          <TodoItems entries={this.state.items} delete={this.deleteItem} />
         </div>
-        <TodoItems entries={this.state.items} delete={this.deleteItem} />
       </div>
     );
   }
